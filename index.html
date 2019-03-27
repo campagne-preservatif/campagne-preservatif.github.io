@@ -1,10 +1,14 @@
-<body style="background-color:#ECECEC;">
+<head>
 <script>
 $("#clickme").click(function(){
     $('#temptext').select();
     document.execCommand('copy');
 });
 </script>
+</head>
+
+<body style="background-color:#ECECEC;">
+
 	
   <textarea id="temptext"> <?php echo $team['export'] ;?></textarea>
 <div id="clickme"><img src="../img/utilitaire/copy.png"> Copier</div>
