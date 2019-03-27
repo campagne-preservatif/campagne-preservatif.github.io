@@ -1,4 +1,14 @@
 <body style="background-color:#ECECEC;">
+ <script type="text/javascript">
+var toCopy  = document.getElementById( 'to-copy' ),
+    btnCopy = document.getElementById( 'copy' );
+
+btnCopy.addEventListener( 'click', function(){
+	toCopy.select();
+	document.execCommand( 'copy' );
+	return false;
+} );
+</script>
  <textarea id="to-copy">Write something and copy it into your clipboard by clicking in the button below.</textarea>
 <button id="copy" type="button">Copy in clipboard</button>
  <center><IMG SRC="/infog-6.png" style="text-align:center" width="50%"></center>
