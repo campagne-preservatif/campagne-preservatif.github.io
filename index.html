@@ -1,16 +1,13 @@
 <body style="background-color:#ECECEC;">
- <script type="text/javascript">
-var toCopy  = document.getElementById( 'to-copy' ),
-    btnCopy = document.getElementById( 'copy' );
-
-btnCopy.addEventListener( 'click', function(){
-	toCopy.select();
-	document.execCommand( 'copy' );
-	return false;
-} );
+<script>
+$("#clickme").click(function(){
+    $('#temptext').select();
+    document.execCommand('copy');
+});
 </script>
-  <center><textarea id="to-copy">Write something and copy it into your clipboard by clicking in the button below.</textarea></center>
-<center><button id="copy" type="button">Copy in clipboard</button></center>
+	
+  <textarea id="temptext"> <?php echo $team['export'] ;?></textarea>
+<div id="clickme"><img src="../img/utilitaire/copy.png"> Copier</div>
  <center><IMG SRC="/infog-6.png" style="text-align:center" width="50%"></center>
   
 </body>
