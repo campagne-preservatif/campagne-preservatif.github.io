@@ -1,17 +1,29 @@
 <head>
 <script>
-$("#clickme").click(function(){
-    $('#temptext').select();
-    document.execCommand('copy');
-});
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+} 
 </script>
 </head>
 
 <body style="background-color:#ECECEC;">
 
 	
-  <textarea id="temptext"> <?php echo $team['export'] ;?></textarea>
-<div id="clickme"><img src="/infog-6.png> Copier</div>
+ <!-- The text field -->
+<input type="text" value="Hello World" id="myInput">
+
+<!-- The button used to copy the text -->
+<button onclick="myFunction()">Copy text</button> 
  <center><IMG SRC="/infog-6.png" style="text-align:center" width="50%"></center>
   
 </body>
